@@ -1,0 +1,9 @@
+@use "sass:math";
+
+.root {
+  padding: 100px (math.div(190, 1440) * 100%);
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: min-content;
+  row-gap: 100px;
+}
