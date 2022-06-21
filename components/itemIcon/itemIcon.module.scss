@@ -1,0 +1,33 @@
+@use "/styles/const.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 10px;
+  align-items: center;
+}
+
+.icon {
+  font-size: 44px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+
+  &_reversed {
+    flex-direction: column-reverse;
+  }
+}
+
+.title {
+  margin: 0;
+  @extend %bold-18px;
+  color: const.$white;
+}
+
+.subtitle {
+  margin: 0;
+  @extend %regular-12px;
+  color: const.$gray10;
+}
