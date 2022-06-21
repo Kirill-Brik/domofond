@@ -1,0 +1,36 @@
+@use "sass:math";
+@use "/styles/const.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(3, min-content);
+  align-items: center;
+  padding: 15px (math.div(190, 1440) * 100%);
+  height: min-content;
+  border-bottom: 1px solid const.$gray2;
+}
+
+.logo {
+  justify-self: start;
+}
+
+.navbar {
+  justify-self: center;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 40px;
+}
+
+.navbarList {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.phone {
+  justify-self: end;
+}
