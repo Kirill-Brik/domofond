@@ -1,13 +1,10 @@
 import Image from "next/image";
 
+import { IAdvantageItem } from "../../utils/interfaces";
+
 import styles from "./advantages.module.scss";
 
 export default function Advantages() {
-  interface IAdvantageItem {
-    readonly icon: string;
-    readonly text: string;
-  }
-
   const advantages: Array<IAdvantageItem> = [
     { icon: "construction", text: "Наличие оборудования и своей спецтехники" },
     { icon: "emoji_events", text: "Большой опыт работы в сфере ЖКХ" },

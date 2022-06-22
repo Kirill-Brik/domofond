@@ -1,11 +1,8 @@
 import NextLink from "next/link";
 
-import styles from "./link.module.scss";
+import { ILink } from "../../utils/interfaces";
 
-export interface ILink {
-  readonly href: string;
-  readonly content: string;
-}
+import styles from "./link.module.scss";
 
 export default function Link({ href, content }: ILink) {
   return (

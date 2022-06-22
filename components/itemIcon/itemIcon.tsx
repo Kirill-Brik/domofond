@@ -1,11 +1,6 @@
-import styles from "./itemIcon.module.scss";
+import { IItemIcon } from "../../utils/interfaces";
 
-export interface IItemIcon {
-  readonly icon: string;
-  readonly title: string;
-  readonly subtitle: string;
-  readonly reversed?: boolean;
-}
+import styles from "./itemIcon.module.scss";
 
 export default function ItemIcon({
   icon,

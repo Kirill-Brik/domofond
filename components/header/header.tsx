@@ -1,6 +1,7 @@
 import Image from "next/image";
-import Link, { ILink } from "../link/link";
+import Link from "../link/link";
 import ItemIcon from "../itemIcon/itemIcon";
+import { ILink } from "../../utils/interfaces";
 
 import styles from "./header.module.scss";
 
