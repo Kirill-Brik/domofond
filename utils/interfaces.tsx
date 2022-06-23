@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Url } from "url";
 
 export interface ILayout {
   children: ReactNode;
@@ -10,19 +11,14 @@ export interface ICard extends ILayout {
 }
 
 export interface ILink {
-  readonly href: string;
+  readonly url: Url;
   readonly content: string;
 }
 
-export interface IHome {
-  readonly address: string;
-  readonly contract: string;
-  readonly reports: Array<string>;
-}
-
-export interface IAdvantageItem {
+export interface IButtonIcon {
+  readonly type: "button" | "link";
   readonly icon: string;
-  readonly text: string;
+  readonly url?: Url | string;
 }
 
 export interface IItemIcon {
@@ -30,4 +26,15 @@ export interface IItemIcon {
   readonly title: string;
   readonly subtitle: string;
   readonly reversed?: boolean;
+}
+
+export interface IHome {
+  readonly address: string;
+  readonly contract: Url | string;
+  readonly reports: Array<Url | string>;
+}
+
+export interface IAdvantageItem {
+  readonly icon: string;
+  readonly text: string;
 }
