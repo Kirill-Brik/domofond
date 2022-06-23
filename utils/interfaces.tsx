@@ -19,6 +19,7 @@ export interface IButtonIcon {
   readonly type: "button" | "link";
   readonly icon: string;
   readonly url?: Url | string;
+  readonly className?: string;
 }
 
 export interface IItemIcon {
