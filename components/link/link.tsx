@@ -4,10 +4,10 @@ import { ILink } from "../../utils/interfaces";
 
 import styles from "./link.module.scss";
 
-export default function Link({ href, content }: ILink) {
+export default function Link({ url, content }: ILink) {
   return (
     <>
-      <NextLink href={href} passHref>
+      <NextLink href={url} passHref>
         <a className={styles.container} data-text={content}>
           {content}
         </a>

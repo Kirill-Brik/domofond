@@ -11,7 +11,7 @@ export interface ICard extends ILayout {
 }
 
 export interface ILink {
-  readonly url: Url;
+  readonly url: Url | string;
   readonly content: string;
 }
 

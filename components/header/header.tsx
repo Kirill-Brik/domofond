@@ -7,9 +7,9 @@ import styles from "./header.module.scss";
 
 export default function Header() {
   const links: Array<ILink> = [
-    { content: "Главная", href: "/" },
-    { content: "О компании", href: "/about" },
-    { content: "Наши дома", href: "/homes" },
+    { content: "Главная", url: "/" },
+    { content: "О компании", url: "/about" },
+    { content: "Наши дома", url: "/homes" },
   ];
 
   return (
@@ -25,7 +25,7 @@ export default function Header() {
         <ul className={styles.navbarList}>
           {links.map((link, index) => (
             <li key={index}>
-              <Link href={link.href} content={link.content} />
+              <Link url={link.url} content={link.content} />
             </li>
           ))}
         </ul>
