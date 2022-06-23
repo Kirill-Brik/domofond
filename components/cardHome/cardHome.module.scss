@@ -1,4 +1,47 @@
+@use "/utils/const";
+
 .container {
   height: 100%;
+}
+.address {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 12px 24px;
+  @extend %bold-24px;
+  color: const.$white;
+  border-bottom: 1px solid const.$green;
+}
+
+.contract {
   display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content;
+  column-gap: 10px;
+  align-items: center;
+  padding: 12px 24px;
+}
+
+.contractText {
+  @extend %regular-16px;
+  color: const.$white;
+}
+
+.reportList {
+  margin: 0;
+  padding: 0 24px 12px;
+  list-style-type: none;
+  @extend %regular-14px;
+}
+
+.reportLink {
+  color: const.$gray11;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline const.$green 15%;
+  }
+
+  &:active {
+    opacity: 0.75;
+  }
 }
