@@ -1,9 +1,13 @@
+import { Scrollbar, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { IHome } from "../../utils/interfaces";
 
-import styles from "./homeSwiper.module.scss";
-import "swiper/css";
 import CardHome from "../cardHome/cardHome";
+import ButtonIcon from "../buttonIcon/buttonIcon";
+
+import "swiper/css";
+import styles from "./homeSwiper.module.scss";
+
+import { IHome } from "../../utils/interfaces";
 
 export default function HomeSwiper() {
   const homeList: Array<IHome> = [
@@ -15,7 +19,32 @@ export default function HomeSwiper() {
   ];
   return (
     <section className={styles.container}>
-      <Swiper className={styles.swiper} spaceBetween={50} slidesPerView={3}>
+      <h2 className={styles.title}>Наши дома</h2>
+      <Swiper
+        className={styles.swiper}
+        breakpoints={{
+          1440: {
+            slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+        }}
+        spaceBetween={40}
+        modules={[Navigation, Scrollbar]}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        scrollbar={{
+          el: ".scrollbar",
+          dragClass: styles.scrollbarDrag,
+          draggable: true,
+        }}
+      >
         {homeList.map((home, index) => (
           <SwiperSlide key={index}>
             <CardHome
@@ -26,6 +55,21 @@ export default function HomeSwiper() {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className={styles.navigation}>
+        <ButtonIcon
+          className="swiper-button-prev"
+          type="button"
+          icon="arrow_back"
+        />
+        <div className={styles.scrollbar + " " + "scrollbar"}>
+          <div className={styles.scrollbarDrag}></div>
+        </div>
+        <ButtonIcon
+          className="swiper-button-next"
+          type="button"
+          icon="arrow_forward"
+        />
+      </div>
     </section>
   );
 }
