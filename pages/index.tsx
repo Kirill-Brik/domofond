@@ -4,8 +4,6 @@ import HomeSwiper from "../components/homeSwiper/homeSwiper";
 import Head from "next/head";
 import type { NextPage } from "next";
 
-import { initializeApp } from "firebase/app";
-
 import { IHome } from "../utils/interfaces";
 
 const Home: NextPage = () => {
