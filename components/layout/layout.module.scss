@@ -5,5 +5,6 @@
   display: grid;
   grid-auto-flow: row;
   grid-template-rows: min-content;
+  justify-items: center;
   row-gap: 100px;
 }

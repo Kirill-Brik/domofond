@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "../link/link";
-import ItemIcon from "../itemIcon/itemIcon";
+import ItemNamed from "../itemNamed/itemNamed";
 import { ILink } from "../../utils/interfaces";
 
 import styles from "./header.module.scss";
 
 export default function Header() {
   const links: Array<ILink> = [
-    { content: "Главная", url: "/" },
-    { content: "О компании", url: "/about" },
-    { content: "Наши дома", url: "/homes" },
+    { text: "Главная", url: "/" },
+    { text: "О компании", url: "/about" },
+    { text: "Наши дома", url: "/homes" },
   ];
 
   return (
@@ -25,16 +25,17 @@ export default function Header() {
         <ul className={styles.navbarList}>
           {links.map((link, index) => (
             <li key={index}>
-              <Link url={link.url} content={link.content} />
+              <Link url={link.url} text={link.text} />
             </li>
           ))}
         </ul>
       </nav>
       <div className={styles.phone}>
-        <ItemIcon
+        <ItemNamed
           icon="phone_in_talk"
-          title="8 (903) 845-10-13"
-          subtitle="Ежедневно с 9:00 до 20:00"
+          text="8 (903) 845-10-13"
+          name="Ежедневно с 9:00 до 20:00"
+          reversed
         />
       </div>
     </header>

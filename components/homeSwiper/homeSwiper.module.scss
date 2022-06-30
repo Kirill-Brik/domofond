@@ -7,6 +7,7 @@
   grid-auto-flow: row;
   grid-template-rows: min-content;
   justify-items: center;
+  width: calc(100% + 48px);
 }
 
 .title {
@@ -18,22 +19,21 @@
 .swiper {
   width: 100%;
   height: 100%;
+  padding: 0 24px 24px;
 }
 
 .navigation {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
   align-items: center;
-  margin-top: 24px;
-  width: (math.div(350, 1060) * 100%);
+  column-gap: 10px;
+  width: 350px;
 }
 
 .scrollbar {
   display: flex;
   align-items: center;
-  margin: 0 10px;
   height: 10px;
-  width: 100%;
   background-color: const.$gray2;
   border-radius: 10px;
   cursor: pointer;

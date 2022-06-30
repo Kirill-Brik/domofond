@@ -1,4 +1,5 @@
 import "normalize.css";
+import "material-symbols/outlined.css";
 import "../styles/globals.scss";
 
 import Layout from "../components/layout/layout";

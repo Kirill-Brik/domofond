@@ -6,13 +6,24 @@ export interface ILayout {
 }
 
 export interface ICard extends ILayout {
-  readonly key?: string | number;
   readonly className?: string;
 }
 
 export interface ILink {
   readonly url: Url | string;
-  readonly content: string;
+  readonly text: string;
+  readonly textSyze?: "small" | "medium";
+  readonly icon?: string;
+  readonly className?: string;
+}
+
+export interface IInput {
+  readonly placeholder: string;
+  readonly name: string;
+}
+
+export interface IInputText extends IInput {
+  readonly icon: string;
 }
 
 export interface IButtonIcon {
@@ -22,10 +33,10 @@ export interface IButtonIcon {
   readonly className?: string;
 }
 
-export interface IItemIcon {
-  readonly icon: string;
-  readonly title: string;
-  readonly subtitle: string;
+export interface IItemNamed {
+  readonly icon?: string;
+  readonly name: string;
+  readonly text: string;
   readonly reversed?: boolean;
 }
 
@@ -33,6 +44,7 @@ export interface IHome {
   readonly address: string;
   readonly contract: Url | string;
   readonly reports: Array<Url | string>;
+  readonly className?: string;
 }
 
 export interface IAdvantageItem {

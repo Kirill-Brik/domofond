@@ -1,0 +1,42 @@
+@use "/utils//const.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 44px;
+  width: 100%;
+}
+
+.list {
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 14px;
+  margin: 0;
+  padding: 0;
+  height: min-content;
+  width: 100%;
+  list-style-type: none;
+}
+
+.itemName {
+  margin: 0;
+  @extend %regular-12px;
+  color: const.$gray10;
+}
+
+.itemText {
+  margin: 0;
+  @extend %bold-18px;
+  color: const.$white;
+}
+
+.itemButton {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.image {
+  align-self: end;
+}

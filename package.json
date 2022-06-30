@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "material-symbols": "^0.2.1",
     "next": "12.1.6",
     "normalize.css": "^8.0.1",
     "react": "18.2.0",

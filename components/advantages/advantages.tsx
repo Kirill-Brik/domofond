@@ -7,7 +7,7 @@ import styles from "./advantages.module.scss";
 export default function Advantages() {
   const advantages: Array<IAdvantageItem> = [
     { icon: "construction", text: "Наличие оборудования и своей спецтехники" },
-    { icon: "emoji_events", text: "Большой опыт работы в сфере ЖКХ" },
+    { icon: "monitoring", text: "Большой опыт работы в сфере ЖКХ" },
     {
       icon: "published_with_changes",
       text: "Оперативная реакция на заявки от жителей",
@@ -29,7 +29,9 @@ export default function Advantages() {
         <ul className={styles.list}>
           {advantages.map((item, index) => (
             <li className={styles.item} key={index}>
-              <span className={styles.itemIcon + " " + "material-icons"}>
+              <span
+                className={styles.itemIcon + " " + "material-symbols-outlined"}
+              >
                 {item.icon}
               </span>
               <p className={styles.itemText}>{item.text}</p>

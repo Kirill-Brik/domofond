@@ -13,14 +13,18 @@ export default function ButtonIcon({
   if (type === "button")
     return (
       <button className={styles.container + " " + className || ""}>
-        <span className={styles.icon + " " + "material-icons"}>{icon}</span>
+        <span className={styles.icon + " " + "material-symbols-outlined"}>
+          {icon}
+        </span>
       </button>
     );
   else
     return (
       <Link href={url || "#"} passHref>
         <a className={styles.container + " " + className || ""}>
-          <span className={styles.icon + " " + "material-icons"}>{icon}</span>
+          <span className={styles.icon + " " + "material-symbols-outlined"}>
+            {icon}
+          </span>
         </a>
       </Link>
     );
