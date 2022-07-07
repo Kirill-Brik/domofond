@@ -3,8 +3,6 @@ import Link from "next/link";
 import Card from "../card/card";
 import CustomLink from "../link/link";
 
-import { IHome } from "../../utils/interfaces";
-
 import styles from "./cardHome.module.scss";
 
 export default function CardHome({
@@ -12,25 +10,32 @@ export default function CardHome({
   contract,
   reports,
   className,
-}: IHome) {
+  downloadHandler,
+}: any) {
   return (
     <Card className={styles.container + " " + className}>
       <h3 className={styles.address}>{address}</h3>
-      <CustomLink
-        className={styles.contract}
-        url={contract}
-        text="Договор управления"
-        icon="assignment"
-        textSyze="small"
-      />
+      {contract && (
+        <CustomLink
+          className={styles.contract}
+          url={contract}
+          text="Договор управления"
+          icon="assignment"
+          textSyze="small"
+          downloadHandler={downloadHandler}
+        />
+      )}
       <ul className={styles.reportList}>
-        {reports.map((report, index) => (
-          <li key={index}>
-            <Link href={report} passHref>
-              <a className={styles.reportLink}>Отчет</a>
-            </Link>
-          </li>
-        ))}
+        {reports &&
+          reports.map(({ link, name }: any) => (
+            <li key={link}>
+              <Link href={link} passHref>
+                <a onClick={downloadHandler} className={styles.reportLink}>
+                  Отчет за {name} год{" "}
+                </a>
+              </Link>
+            </li>
+          ))}
       </ul>
     </Card>
   );

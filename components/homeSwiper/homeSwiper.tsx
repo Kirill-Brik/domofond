@@ -6,13 +6,8 @@ import ButtonIcon from "../buttonIcon/buttonIcon";
 
 import "swiper/css";
 import styles from "./homeSwiper.module.scss";
-import { IHome } from "../../utils/interfaces";
 
-interface IHomes {
-  homeList: Array<IHome>;
-}
-
-export default function HomeSwiper({ homeList }: IHomes) {
+export default function HomeSwiper({ homeList, downloadHandler }: any) {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>Наши дома</h2>
@@ -41,13 +36,14 @@ export default function HomeSwiper({ homeList }: IHomes) {
           draggable: true,
         }}
       >
-        {homeList.map((home, index) => (
+        {homeList.map((home: any, index: any) => (
           <SwiperSlide key={index}>
             <CardHome
               address={home.address}
               contract={home.contract}
               reports={home.reports}
               className={styles.slide}
+              downloadHandler={downloadHandler}
             ></CardHome>
           </SwiperSlide>
         ))}

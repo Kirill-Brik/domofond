@@ -41,9 +41,12 @@ export interface IItemNamed {
 }
 
 export interface IHome {
-  readonly address: string;
-  readonly contract: Url | string;
-  readonly reports: Array<Url | string>;
+  address: string;
+  contract: string;
+  reports: Array<{
+    name: string;
+    link: string;
+  }>;
   readonly className?: string;
 }
 

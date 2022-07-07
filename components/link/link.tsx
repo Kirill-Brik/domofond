@@ -5,11 +5,23 @@ import { ILink } from "../../utils/interfaces";
 
 import styles from "./link.module.scss";
 
-export default function Link({ url, text, icon, className, textSyze }: ILink) {
+export default function Link({
+  url,
+  text,
+  icon,
+  className,
+  textSyze,
+  downloadHandler,
+}: any) {
   if (icon)
     return (
       <div className={styles.container + " " + className}>
-        <ButtonIcon type="link" url={url} icon={icon} />
+        <ButtonIcon
+          type="link"
+          url={url}
+          icon={icon}
+          downloadHandler={downloadHandler}
+        />
         <span
           className={
             styles.text +

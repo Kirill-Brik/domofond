@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { IButtonIcon } from "../../utils/interfaces";
 
 import styles from "./buttonIcon.module.scss";
@@ -9,7 +8,8 @@ export default function ButtonIcon({
   icon,
   url,
   className,
-}: IButtonIcon) {
+  downloadHandler,
+}: any) {
   if (type === "button")
     return (
       <button className={styles.container + " " + className || ""}>
@@ -21,7 +21,10 @@ export default function ButtonIcon({
   else
     return (
       <Link href={url || "#"} passHref>
-        <a className={styles.container + " " + className || ""}>
+        <a
+          onClick={downloadHandler}
+          className={styles.container + " " + className || ""}
+        >
           <span className={styles.icon + " " + "material-symbols-outlined"}>
             {icon}
           </span>

@@ -1,17 +1,15 @@
 import Image from "next/image";
-import ButtonIcon from "../buttonIcon/buttonIcon";
 import Link from "../link/link";
 
 import { IItemNamed } from "../../utils/interfaces";
 
 import styles from "./aboutCompany.module.scss";
 import ItemNamed from "../itemNamed/itemNamed";
-
 export default function AboutCompany() {
   const itemList: Array<IItemNamed> = [
     { name: "Руководитель:", text: "Брик Евстолия Гариевна" },
-    { name: "ОГРН:", text: "1157154015700" },
-    { name: "ИНН:", text: "7107107609" },
+    { name: "ОГРН:", text: "1167154082314" },
+    { name: "ИНН:", text: "7105049366" },
     {
       name: "Юридитеческий адрес:",
       text: "Тульская область, г. Тула, ул. Баженова, д. 7, кв.8",

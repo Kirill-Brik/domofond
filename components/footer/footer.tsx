@@ -13,7 +13,7 @@ export default function Footer() {
         <li>
           <ItemNamed
             icon="phone_in_talk"
-            text="8 (903) 845-10-13"
+            text="(4872) 412-451"
             name="Контактный телефон:"
           />
         </li>
