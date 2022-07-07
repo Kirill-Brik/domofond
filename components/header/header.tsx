@@ -33,7 +33,7 @@ export default function Header() {
       <div className={styles.phone}>
         <ItemNamed
           icon="phone_in_talk"
-          text="(4872) 790-451"
+          text="+7 (4872) 790-451"
           name="Аварийно-диспечерская служба"
           reversed
         />
