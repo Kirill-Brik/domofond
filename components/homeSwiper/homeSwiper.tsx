@@ -7,17 +7,24 @@ import ButtonIcon from "../buttonIcon/buttonIcon";
 import "swiper/css";
 import styles from "./homeSwiper.module.scss";
 
-export default function HomeSwiper({ homeList, downloadHandler }: any) {
+import { IHome } from "../../utils/interfaces";
+import { MouseEventHandler } from "react";
+
+interface IHomeSwiper {
+  homeList: Array<IHome>;
+}
+
+const HomeSwiper = ({ homeList }: IHomeSwiper) => {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>Наши дома</h2>
       <Swiper
         className={styles.swiper}
         breakpoints={{
-          1440: {
+          1680: {
             slidesPerView: 4,
           },
-          1024: {
+          1280: {
             slidesPerView: 3,
           },
           768: {
@@ -36,15 +43,9 @@ export default function HomeSwiper({ homeList, downloadHandler }: any) {
           draggable: true,
         }}
       >
-        {homeList.map((home: any, index: any) => (
+        {homeList.map((homeData, index) => (
           <SwiperSlide key={index}>
-            <CardHome
-              address={home.address}
-              contract={home.contract}
-              reports={home.reports}
-              className={styles.slide}
-              downloadHandler={downloadHandler}
-            ></CardHome>
+            <CardHome home={homeData} className={styles.slide}></CardHome>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -65,4 +66,6 @@ export default function HomeSwiper({ homeList, downloadHandler }: any) {
       </div>
     </section>
   );
-}
+};
+
+export default HomeSwiper;

@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+}
+
+.homeList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+  margin: 0;
+  padding: 0;
+  gap: 48px;
+  list-style-type: none;
+}

@@ -1,12 +1,11 @@
 import Image from "next/image";
-import Link from "../link/link";
+import CustomLink, { ICustomLink } from "../customLink/customLink";
 import ItemNamed from "../itemNamed/itemNamed";
-import { ILink } from "../../utils/interfaces";
 
 import styles from "./header.module.scss";
 
-export default function Header() {
-  const links: Array<ILink> = [
+const Header = () => {
+  const links: Array<ICustomLink> = [
     { text: "Главная", url: "/" },
     { text: "О компании", url: "/about" },
     { text: "Наши дома", url: "/homes" },
@@ -25,7 +24,7 @@ export default function Header() {
         <ul className={styles.navbarList}>
           {links.map((link, index) => (
             <li key={index}>
-              <Link url={link.url} text={link.text} />
+              <CustomLink url={link.url} text={link.text} />
             </li>
           ))}
         </ul>
@@ -35,9 +34,12 @@ export default function Header() {
           icon="phone_in_talk"
           text="+7 (4872) 790-451"
           name="Аварийно-диспечерская служба"
+          href="tel: +7(4872)790-451"
           reversed
         />
       </div>
     </header>
   );
-}
+};
+
+export default Header;

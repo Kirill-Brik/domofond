@@ -1,15 +1,24 @@
 import Link from "next/link";
-import { IButtonIcon } from "../../utils/interfaces";
+import { MouseEventHandler } from "react";
+import { Url } from "url";
 
 import styles from "./buttonIcon.module.scss";
 
-export default function ButtonIcon({
+export interface IButtonIcon {
+  readonly type: "button" | "link";
+  readonly icon: string;
+  readonly url?: Url | string;
+  readonly className?: string;
+  readonly downloadHandler?: MouseEventHandler;
+}
+
+const ButtonIcon = ({
   type,
   icon,
   url,
   className,
   downloadHandler,
-}: any) {
+}: IButtonIcon) => {
   if (type === "button")
     return (
       <button className={styles.container + " " + className || ""}>
@@ -31,4 +40,6 @@ export default function ButtonIcon({
         </a>
       </Link>
     );
-}
+};
+
+export default ButtonIcon;

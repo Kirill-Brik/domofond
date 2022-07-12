@@ -7,6 +7,7 @@
   grid-template-rows: min-content 1fr;
   gap: 30px 44px;
   height: min-content;
+  width: 100%;
 }
 
 .header {
@@ -62,6 +63,7 @@
 }
 
 .itemIcon {
+  width: 48px;
   font-size: 48px;
 }
 

@@ -1,18 +1,27 @@
 import NextLink from "next/link";
+import { MouseEventHandler } from "react";
+import { Url } from "url";
 import ButtonIcon from "../buttonIcon/buttonIcon";
 
-import { ILink } from "../../utils/interfaces";
+import styles from "./customLink.module.scss";
 
-import styles from "./link.module.scss";
+export interface ICustomLink {
+  readonly url: Url | string;
+  readonly text: string;
+  readonly textSyze?: "small" | "medium";
+  readonly icon?: string;
+  readonly className?: string;
+  readonly downloadHandler?: MouseEventHandler;
+}
 
-export default function Link({
+const CustomLink = ({
   url,
   text,
   icon,
   className,
   textSyze,
   downloadHandler,
-}: any) {
+}: ICustomLink) => {
   if (icon)
     return (
       <div className={styles.container + " " + className}>
@@ -41,4 +50,6 @@ export default function Link({
         </a>
       </NextLink>
     );
-}
+};
+
+export default CustomLink;

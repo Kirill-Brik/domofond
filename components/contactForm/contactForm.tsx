@@ -6,7 +6,7 @@ interface IWindow extends Window {
   Widget?: any;
 }
 
-export default function ContactForm() {
+const ContactForm = () => {
   return (
     <div className={styles.container}>
       <style jsx>{`
@@ -469,4 +469,6 @@ export default function ContactForm() {
       />
     </div>
   );
-}
+};
+
+export default ContactForm;

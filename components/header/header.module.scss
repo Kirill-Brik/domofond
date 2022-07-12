@@ -34,3 +34,9 @@
 .phone {
   justify-self: end;
 }
+
+@media screen and (max-width: 1440px) {
+  .container {
+    padding: 15px (math.div(90, 1440) * 100%);
+  }
+}

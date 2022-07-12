@@ -2,7 +2,7 @@ import Head from "next/head";
 import type { NextPage } from "next";
 import AboutCompany from "../../components/aboutCompany/aboutCompany";
 
-const About: NextPage = () => {
+const Index: NextPage = () => {
   return (
     <>
       <Head>
@@ -13,4 +13,4 @@ const About: NextPage = () => {
   );
 };
 
-export default About;
+export default Index;
