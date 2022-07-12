@@ -3,7 +3,7 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 44px;
+  gap: 44px;
   width: 100%;
 }
 
@@ -39,4 +39,74 @@
 
 .image {
   align-self: end;
+}
+
+.cardList {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content;
+  column-gap: 44px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  height: 100%;
+}
+
+.cardIcon {
+  width: 48px;
+  font-size: 48px;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 12px 24px;
+  height: 100px;
+  border-bottom: 1px solid const.$green;
+}
+
+.cardTitleText {
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  margin-left: 14px;
+  min-height: 48px;
+  @extend %bold-24px;
+  color: const.$white;
+}
+
+.cardItems {
+  position: relative;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: min-content;
+  row-gap: 14px;
+  margin: 0;
+  padding: 14px;
+  list-style-type: none;
+}
+
+.cardTimetable {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.officeCard {
+  background-image: url("/office.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right 14px;
+  background-size: 280px;
+}
+
+.technicCard {
+  background-image: url("/technic.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right 14px;
+  background-size: 230px;
 }
