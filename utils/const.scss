@@ -13,6 +13,10 @@ $green: #369a30;
   font-weight: 700;
   font-size: 18px;
   line-height: 152%;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+  }
 }
 
 %bold-24px {
@@ -27,6 +31,10 @@ $green: #369a30;
   font-weight: 700;
   font-size: 36px;
   line-height: 133%;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 24px;
+  }
 }
 
 %medium-18px {
@@ -41,6 +49,10 @@ $green: #369a30;
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 10px;
+  }
 }
 
 %regular-14px {
@@ -48,6 +60,10 @@ $green: #369a30;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 12px;
+  }
 }
 
 %regular-16px {
@@ -55,6 +71,10 @@ $green: #369a30;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+  }
 }
 
 %regular-18px {
@@ -62,4 +82,8 @@ $green: #369a30;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+  }
 }

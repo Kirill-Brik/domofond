@@ -22,27 +22,24 @@ const CustomLink = ({
   textSyze,
   downloadHandler,
 }: ICustomLink) => {
-  if (icon)
+  if (icon) {
+    const containerClass = styles.container + " " + className;
+    const textClass =
+      styles.text +
+      " " +
+      (styles.text_size_ + textSyze || styles.text_size_medium);
     return (
-      <div className={styles.container + " " + className}>
+      <div className={containerClass}>
         <ButtonIcon
           type="link"
           url={url}
           icon={icon}
           downloadHandler={downloadHandler}
         />
-        <span
-          className={
-            styles.text +
-            " " +
-            (styles.text_size_ + textSyze || styles.text_size_medium)
-          }
-        >
-          {text}
-        </span>
+        <span className={textClass}>{text}</span>
       </div>
     );
-  else
+  } else
     return (
       <NextLink href={url} passHref>
         <a className={styles.link} data-text={text}>

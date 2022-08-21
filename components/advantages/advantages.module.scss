@@ -65,6 +65,10 @@
 .itemIcon {
   width: 48px;
   font-size: 48px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 36px;
+  }
 }
 
 .itemText {

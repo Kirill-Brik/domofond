@@ -19,24 +19,24 @@ const Footer = () => {
           </li>
           <li>
             <ItemNamed
-              icon="person_pin_circle"
-              text="г. Тула, ул. Баженова, д. 7, кв. 8"
-              name="Адресс:"
-            />
-          </li>
-          <li>
-            <ItemNamed
               icon="mail"
               text="roman.brik@yandex.ru"
               name="Почта:"
               href="mailto: roman.brik@yandex.ru"
             />
           </li>
+          <li>
+            <ItemNamed
+              icon="person_pin_circle"
+              text="г. Тула, ул. Баженова, д. 7, кв. 8"
+              name="Адресс:"
+            />
+          </li>
         </ul>
-        <p className={styles.copyright}>
-          © uk-domofomd.ru, 2022 | ООО УК “Домофонд”
-        </p>
       </div>
+      <p className={styles.copyright}>
+        © uk-domofomd.ru, 2022 | ООО УК “Домофонд”
+      </p>
     </footer>
   );
 };

@@ -9,18 +9,14 @@ export interface IItemNamed {
 }
 
 const ItemNamed = ({ icon, name, text, reversed, href }: IItemNamed) => {
+  const iconClass = styles.icon + " " + "material-symbols-outlined";
+  const contentClass =
+    styles.content + (reversed ? " " + styles.content_reversed : "");
+
   return (
     <div className={styles.container}>
-      {icon && (
-        <span className={styles.icon + " " + "material-symbols-outlined"}>
-          {icon}
-        </span>
-      )}
-      <div
-        className={
-          styles.content + (reversed ? " " + styles.content_reversed : "")
-        }
-      >
+      {icon && <span className={iconClass}>{icon}</span>}
+      <div className={contentClass}>
         <span className={styles.name}>{name}</span>
 
         {(href && (
