@@ -17,6 +17,7 @@ const Advantages = () => {
     },
     { icon: "task", text: "Прозрачность в отчетности" },
   ];
+  const itenIconClass = styles.itemIcon + " " + "material-symbols-outlined";
 
   return (
     <section className={styles.container}>
@@ -32,11 +33,7 @@ const Advantages = () => {
         <ul className={styles.list}>
           {advantages.map((item, index) => (
             <li className={styles.item} key={index}>
-              <span
-                className={styles.itemIcon + " " + "material-symbols-outlined"}
-              >
-                {item.icon}
-              </span>
+              <span className={itenIconClass}>{item.icon}</span>
               <p className={styles.itemText}>{item.text}</p>
             </li>
           ))}

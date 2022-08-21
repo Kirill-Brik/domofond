@@ -1,12 +1,16 @@
 @use "sass:math";
 
 .root {
-  padding: 100px (math.div(190, 1980) * 100%);
+  padding: 100px (math.div(190, 1440) * 100%);
   display: grid;
   grid-auto-flow: row;
   grid-template-rows: min-content;
   justify-items: center;
   row-gap: 100px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 @media screen and (max-width: 1440px) {
